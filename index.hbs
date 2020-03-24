@@ -10,12 +10,11 @@ into the {body} of the default.hbs template --}}
         <article id="banner">
             <div class="content">
                 <header>
-                    <h1><a href="{{url}}">{{title}}</a></h1>
-                    {{#if custom_excerpt}}<p>{{custom_excerpt}}</p>{{/if}}
+                    <h1><a href="{{url}}">{{#if title}}{{title}}{{/if}}</a></h1>
                 </header>
                 {{content words="42"}}
                 <ul class="actions">
-                    <li><a href="{{url}}" class="button big">Learn More</a></li>
+                    <li><a href="{{url}}" class="button big">Ganzen Beitrag anzeigen</a></li>
                 </ul>
             </div>
             {{#if feature_image}}
@@ -32,7 +31,7 @@ into the {body} of the default.hbs template --}}
 <section>
 
     <header class="major">
-        <h2>Recent posts</h2>
+        <h2>Neue Beiträge</h2>
     </header>
 
     <section class="posts">
@@ -43,9 +42,6 @@ into the {body} of the default.hbs template --}}
             {{/if}}
             <h3><a href="{{url}}">{{title}}</a></h3>
             <p>{{excerpt words="33"}}</p>
-            <ul class="actions special">
-                <li><a href="{{url}}" class="button">Full Story</a></li>
-            </ul>
         </article>
         {{/foreach}}
     </section>
